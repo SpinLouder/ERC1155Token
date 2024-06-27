@@ -17,7 +17,10 @@ contract SpinLouderScript is Script {
 
         vm.startBroadcast(privateKey);
 
-        SpinLouder ebt = new SpinLouder(0x376d1c280197d6a6b2FBBA5E8D7f77fDEE999E06, "https://raw.githubusercontent.com/SpinLouder/ERC1155Token/master/other/");
+        SpinLouder ebt = new SpinLouder(
+            0x376d1c280197d6a6b2FBBA5E8D7f77fDEE999E06,
+            "https://raw.githubusercontent.com/SpinLouder/ERC1155Token/master/other/"
+        );
 
         vm.stopBroadcast();
     }

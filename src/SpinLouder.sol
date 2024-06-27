@@ -28,6 +28,7 @@ contract SpinLouder is ERC1155, ERC2981, Ownable {
     constructor(address _initialOwner, string memory _initialURI) Ownable(_initialOwner) ERC1155(_initialURI) {
         baseURI = _initialURI;
         _setDefaultRoyalty(owner(), 500);
+        tokenPrices[1] = price; //set initial price
     }
 
     function adminMint(address to, uint256 tokenId, uint256 quantity) external onlyOwner {
@@ -86,7 +87,7 @@ contract SpinLouder is ERC1155, ERC2981, Ownable {
 
     function contractURI() public pure returns (string memory) {
         string memory json =
-            '{"name": "SpinLouder","description":"SpinLouder for Audio Records", "external_link": "https://external-link-url.com"}';
+            '{"name": "SpinLouder","description":"Unique Vinyl Collectibles", "image": "https://raw.githubusercontent.com/SpinLouder/ERC1155Token/master/other/spinlouder.jpg", "banner_image": "https://raw.githubusercontent.com/SpinLouder/ERC1155Token/master/other/spinlouder.jpg", "featured_image": "https://raw.githubusercontent.com/SpinLouder/ERC1155Token/master/other/spinlouder.jpg", "external_link": "https://github.com/SpinLouder"}';
         return string.concat("data:application/json;utf8,", json);
     }
 
