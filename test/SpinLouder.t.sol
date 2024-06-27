@@ -8,7 +8,7 @@ contract SpinLouderTest is Test {
     SpinLouder public ebt;
 
     function setUp() public {
-        ebt = new SpinLouder(address(1), "https://baseurl.com/");
+        ebt = new SpinLouder(address(1), "https://raw.githubusercontent.com/SpinLouder/ERC1155Token/master/other/");
     }
 
     // function test_Increment() public {
