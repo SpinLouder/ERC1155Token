@@ -68,7 +68,7 @@ contract SpinLouder is ERC1155, ERC2981, Ownable {
 
     // erc1155 function
     function uri(uint256 tokenId) public view override returns (string memory) {
-        return bytes(baseURI).length > 0 ? string(abi.encodePacked(baseURI, tokenId.toString())) : "";
+        return bytes(baseURI).length > 0 ? string(abi.encodePacked(baseURI, tokenId.toString(), ".json")) : "";
     }
 
     //update the default royality
